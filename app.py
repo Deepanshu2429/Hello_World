@@ -5,7 +5,9 @@ import  initalGreetings.readingGF2 as ig2
 import schedulingAlgo.basicFunctions as basFun
 import databaseFunctions.insertData as inst
 import databaseFunctions.createAllTables as crt
-
+#everything is working above
+import databaseFunctions.viewData as vwdt
+import databaseFunctions.deleteData as dlt
 
 
 app = Flask(__name__) #create a flask object
