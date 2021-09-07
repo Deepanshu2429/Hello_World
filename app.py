@@ -8,7 +8,8 @@ import databaseFunctions.createAllTables as crt
 import databaseFunctions.viewData as vwdt
 import databaseFunctions.deleteData as dlt
 #everything is working above
-import basicFunctions.sessionSyncro as sync
+import basicFunctions.resetLinkAccess as rst
+
 import sqlite3
 
 app = Flask(__name__) #create a flask object
