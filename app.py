@@ -1,15 +1,4 @@
-from flask import Flask, render_template,request,redirect, url_for
-import yaml
-import  initalGreetings.readingGf1 as ig1
-import  initalGreetings.readingGF2 as ig2
-import schedulingAlgo.basicFunctions as basFun
-import databaseFunctions.insertData as inst
-import databaseFunctions.createAllTables as crt
-import databaseFunctions.viewData as vwdt
-import databaseFunctions.deleteData as dlt
-import basicFunctions.sessionSyncro as sync
-import basicFunctions.resetLinkAccess as rst
-import sqlite3
+from flask import Flask
 
 
 
