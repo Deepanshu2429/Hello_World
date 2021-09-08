@@ -19,9 +19,9 @@ app = Flask(__name__) #create a flask object
 
 @app.route('/')
 def home():
-    #ig1.readingGF1()
-    #ig2.readingGF2()
-    #sync.syncro()
+    ig1.readingGF1()
+    ig2.readingGF2()
+    sync.syncro()
     return "execution completed"
 
 @app.route('/reset')
