@@ -57,8 +57,7 @@ def insertIntoCalendlyLinks(name,email,contact,calendlyLink,imageName,Descriptio
 
 def insertClientDetails(Name,email,contactnumber,country):
 
-    #print(Name,email,contactnumber,country)
-
+    
     #connecting with database -- these lines shouldn't edited
     connection = sqlite3.connect('quality.db')
     con = connection.cursor()

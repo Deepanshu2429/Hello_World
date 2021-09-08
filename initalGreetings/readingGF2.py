@@ -33,8 +33,8 @@ def readingGF2():
 
     g=pd.DataFrame(data)
 
-    gf1RemainingData=len(g)-lastreadindex
-    print("processing "+ str(gf1RemainingData) + " enteries in GF2")
+    gf2RemainingData=len(g)-lastreadindex
+    print("processing "+ str(gf2RemainingData) + " enteries in GF2")
 
     for i in range(lastreadindex, len(g)):
         
@@ -43,9 +43,8 @@ def readingGF2():
         client_id,Name,email,contactnumber,country,Psychologist=val
         inst.insertIntoWaitingList(client_id,email, g["Issue"][i])
         slf.schedulingLinkForwarding(Name,g["Contact"][i])
-        print("send th message")
 
-        print("Currently processing----------->" + str(i) + " out of "+ str(gf1RemainingData))
+        print("Currently processing----------->" + str(i) + " out of "+ str(gf2RemainingData))
 
         lastreadindex=lastreadindex+1
 

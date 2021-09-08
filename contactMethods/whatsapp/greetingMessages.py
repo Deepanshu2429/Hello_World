@@ -80,5 +80,3 @@ def send_Message(name,number):
 
 
 
-
-send_Message("dipesh","918284990439")

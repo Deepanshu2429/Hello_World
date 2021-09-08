@@ -39,7 +39,9 @@ def LinkOpenedinLast24Hrs(psy):
    connection = sqlite3.connect('quality.db')
    con = connection.cursor()       
 
+   
    query= """SELECT linkOpenedSinceLastSync,LinkOpenedinLas24Hrs FROM linkAccessed where name='""" + str(psy) +"'"
+   print(query)
    con.execute(query)
    data=con.fetchone()
    

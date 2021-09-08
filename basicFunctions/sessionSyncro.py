@@ -15,7 +15,6 @@ import databaseFunctions.insertData as inst
 
 
 def syncro():
-    print("helo")
     credentials = pickle.load(open("basicFunctions/token.pkl", "rb"))
     service = build("calendar", "v3", credentials=credentials)
     result = service.calendarList().list().execute()

@@ -18,10 +18,16 @@ instanceid=cfg["instanceName"]
 #ncomplete message needes to be completed
 def schedulingLinkForwarding(name,number):
 
+    with open("configuration.yml", "r") as ymlfile:
+        cfgMain = yaml.load(ymlfile)  
+
+    #mainsheet name
+    link=cfgMain["link"] 
+
 
     url = "https://api.chat-api.com/"+ str(instanceid) +"/sendLink?token=bfllgpii7xqb42zq"
 
-    payload="{\r\n  \"body\": \"Hi " + str(name.title()) + "\\nPlease you the below link to schedule your session \xF0\x9F\x98\x83 . \\n\\n  https://drivekraftheroku.herokuapp.com/template \",\r\n  \"phone\": \"" +str(number) + "\"\r\n}"
+    payload="{\r\n  \"body\": \"Hi " + str(name.title()) + "\\nPlease you the below link to schedule your session \xF0\x9F\x98\x83 . \\n\\n  https://" + str(link) +".herokuapp.com/template \",\r\n  \"phone\": \"" +str(number) + "\"\r\n}"
     headers = {
             'Content-Type': 'application/json'
             }

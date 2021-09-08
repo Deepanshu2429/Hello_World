@@ -19,6 +19,8 @@ def readingGF1():
     with open("configuration.yml", "r") as ymlfile:
         cfgMain = yaml.load(ymlfile)  
 
+    #taking over whatsapp
+    wt.whattsappTakeover()
 
     #mainsheet name
     sheetName=cfgMain["mainSheetName"]      
@@ -69,6 +71,7 @@ def readingGF1():
 
         print("Currently processing----------->" + str(entryNumber) + " out of "+ str(len(gf1RemainingData)))
         lastreadindex=lastreadindex+1
+        entryNumber=entryNumber+1
 
 
     cfgMain["gf1LastReadIndex"]= lastreadindex

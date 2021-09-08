@@ -9,6 +9,7 @@ import databaseFunctions.viewData as vwdt
 import databaseFunctions.deleteData as dlt
 #everything is working above
 import basicFunctions.resetLinkAccess as rst
+import basicFunctions.resetconf as res
 import basicFunctions.sessionSyncro as sync
 import sqlite3
 
@@ -22,12 +23,19 @@ def home():
     ig1.readingGF1()
     ig2.readingGF2()
     sync.syncro()
-    return "execution completed"
+    return "execution completed2"
 
-@app.route('/reset')
-def reset():
+
+
+@app.route('/resetlink')
+def resetlink():
     rst.resetLinkedAccess()
     return "completed"
+
+@app.route('/resetconf')
+def resetconf():
+    res.resetconf()
+    return "completed"    
 
 
 
@@ -113,6 +121,7 @@ def addingCalendlyUrlInfo():
     Description=request.values.get('Description')
     Type=request.values.get('Type')
 
+    print("value",name,email,contact,url,imageName,Description,Type)
     inst.insertIntoCalendlyLinks(name,email,contact,url,imageName,Description,Type)
     inst.insertIntoLinkAccessed(name,0,0)
     return "Done"
