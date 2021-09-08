@@ -12,6 +12,12 @@ import basicFunctions.resetLinkAccess as rst
 #import basicFunctions.sessionSyncro as sync
 import sqlite3
 
+from datetime import datetime,timedelta
+import databaseFunctions.viewData as vwdt
+import databaseFunctions.insertData as inst
+
+
+
 app = Flask(__name__) #create a flask object
 
 @app.route('/')
