@@ -12,6 +12,13 @@ import basicFunctions.resetLinkAccess as rst
 import basicFunctions.sessionSyncro as sync
 
 
+from google_auth_oauthlib.flow import InstalledAppFlow
+import pickle
+from datetime import datetime,timedelta
+import databaseFunctions.viewData as vwdt
+import databaseFunctions.insertData as inst
+
+
 import sqlite3
 
 app = Flask(__name__) #create a flask object
@@ -20,7 +27,7 @@ app = Flask(__name__) #create a flask object
 def home():
     #ig1.readingGF1()
     #ig2.readingGF2()
-    sync.syncro()
+    #sync.syncro()
     return "execution completed"
 
 @app.route('/reset')
