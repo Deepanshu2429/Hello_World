@@ -10,15 +10,6 @@ import databaseFunctions.deleteData as dlt
 #everything is working above
 import basicFunctions.resetLinkAccess as rst
 import basicFunctions.sessionSyncro as sync
-
-
-from google_auth_oauthlib.flow import InstalledAppFlow
-import pickle
-from datetime import datetime,timedelta
-import databaseFunctions.viewData as vwdt
-import databaseFunctions.insertData as inst
-
-
 import sqlite3
 
 app = Flask(__name__) #create a flask object
