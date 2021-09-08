@@ -9,17 +9,9 @@ import databaseFunctions.viewData as vwdt
 import databaseFunctions.deleteData as dlt
 #everything is working above
 import basicFunctions.resetLinkAccess as rst
-#import basicFunctions.sessionSyncro as sync
+import basicFunctions.sessionSyncro as sync
 import sqlite3
 
-from datetime import datetime,timedelta
-import databaseFunctions.viewData as vwdt
-import databaseFunctions.insertData as inst
-
-from googleapiclient.discovery import build
-
-from google_auth_oauthlib.flow import InstalledAppFlow
-import pickle
 
 
 
