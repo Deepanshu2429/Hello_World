@@ -9,6 +9,8 @@ import databaseFunctions.viewData as vwdt
 import databaseFunctions.deleteData as dlt
 #everything is working above
 import basicFunctions.resetLinkAccess as rst
+import basicFunctions.sessionSyncro as sync
+
 
 import sqlite3
 
@@ -19,7 +21,7 @@ def home():
     return "Working"
     ig1.readingGF1()
     ig2.readingGF2()
-    #sync.syncro()
+    sync.syncro()
     return "execution completed"
 
 @app.route('/reset')
