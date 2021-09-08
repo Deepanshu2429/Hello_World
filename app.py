@@ -18,9 +18,8 @@ app = Flask(__name__) #create a flask object
 
 @app.route('/')
 def home():
-    return "Working"
-    ig1.readingGF1()
-    ig2.readingGF2()
+    #ig1.readingGF1()
+    #ig2.readingGF2()
     sync.syncro()
     return "execution completed"
 
